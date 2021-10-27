@@ -4,7 +4,9 @@
   <div class="cart-item__title">Seagate Portable 2TB External Hard Drive Portable HDD – USB 3.0 for PC, Mac, PS4, & Xbox</div>
   <div class="cart-item__price">{{price | currency:'USD'}}</div>
   <div class="cart-item__discount">{{'discount' | uppercase}}<span [class.highlight]="shouldHighlight()">{{discount | number:'2.2-2' | percentage}}</span></div>
-  <div class="cart-item__final-price">{{price - (price * discount / 100) | currency: 'USD'}}</div>
+  <div class="cart-item__final-price" [style.backgroundColor]="priceChecker()">{{price - (price * discount / 100) | currency: 'USD'}}</div>
+<!--  <div class="cart-item__final-price" [style.backgroundColor]="(price - (price * discount / 100) > 100? 'lightgreen': 'white')">{{price - (price * discount / 100) | currency: 'USD'}}</div>-->
+<!--  <div class="cart-item__final-price" [style.backgroundColor]="'green'">{{price - (price * discount / 100) | currency: 'USD'}}</div>-->
 </div>
 <div class="control-panel">
   <!--Text interpolation-->
