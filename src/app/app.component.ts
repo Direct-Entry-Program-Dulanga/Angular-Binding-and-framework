@@ -17,4 +17,8 @@ export class AppComponent {
   updateDiscount(discount: string) {
     this.discount = +discount;
   }*/
+
+  shouldHighlight(): boolean{
+    return (this.discount > 5);
+  }
 }
