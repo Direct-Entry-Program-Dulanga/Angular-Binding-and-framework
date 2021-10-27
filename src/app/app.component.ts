@@ -6,5 +6,15 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'hello-angular';
+  price = 100;
+  discount = 10;
+
+
+  /*updatePrice(price: string) {
+    this.price = +price;
+  }
+
+  updateDiscount(discount: string) {
+    this.discount = +discount;
+  }*/
 }
