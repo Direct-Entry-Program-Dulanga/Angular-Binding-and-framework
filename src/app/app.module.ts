@@ -7,6 +7,7 @@ import { PercentagePipe } from './pipe/percentage.pipe';
 import { StylingComponent } from './styling/styling.component';
 import { StructuralComponent } from './structural/structural.component';
 import { ParentComponent } from './parent/parent.component';
+import { ChildComponent } from './child/child.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { ParentComponent } from './parent/parent.component';
     PercentagePipe,
     StylingComponent,
     StructuralComponent,
-    ParentComponent
+    ParentComponent,
+    ChildComponent
   ],
     imports: [
         BrowserModule,
