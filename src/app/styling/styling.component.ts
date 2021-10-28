@@ -18,11 +18,17 @@ export class StylingComponent implements OnInit {
   //   underline: this.underline
   // };
 
+  highlight2 = true;
+  primary2 = false;
+  underline2 = false;
+  h1Styles = {};
+
 
   constructor() { }
 
   ngOnInit(): void {
     this.setH1Classes();
+    this.setH1Styles();
   }
 
 
@@ -32,5 +38,13 @@ export class StylingComponent implements OnInit {
       primary: this.primary,
       underline: this.underline
     }
+  }
+
+  setH1Styles(): void {
+    this.h1Styles = {
+      'background-color': this.highlight2 ? 'yellow': 'white',
+      color: this.primary2 ? 'blue': 'black',
+      'text-decoration': this.underline2 ? 'underline': 'none'
+    };
   }
 }

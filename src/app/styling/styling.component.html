@@ -12,3 +12,20 @@
     <input type="checkbox" [(ngModel)]="underline" (ngModelChange)="setH1Classes()">underline
   </label>
 </div>
+<hr>
+
+<!--<h1 [style.backgroundColor]="highlight2? 'yellow': 'white'"-->
+<!--    [style.color]="primary2? 'blue': 'black'"-->
+<!--    [style.textDecoration]="underline2? 'underline': 'none'"-->
+<!--&gt;Let's style with some style properties</h1>-->
+<h1 [ngStyle]="h1Styles">Let's style with some style properties</h1>
+<div>
+  <label>
+    <input type="checkbox" [(ngModel)]="highlight2" (ngModelChange)="setH1Styles()"> Highlight
+  </label>
+  <label>
+    <input type="checkbox" [(ngModel)]="primary2" (ngModelChange)="setH1Styles()"> Primary Color
+  </label>
+  <label>
+    <input type="checkbox" [(ngModel)]="underline2" (ngModelChange)="setH1Styles()"> Underline
+  </label>

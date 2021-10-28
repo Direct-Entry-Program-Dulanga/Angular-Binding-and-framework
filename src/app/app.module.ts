@@ -5,12 +5,14 @@ import { AppComponent } from './app.component';
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import { PercentagePipe } from './pipe/percentage.pipe';
 import { StylingComponent } from './styling/styling.component';
+import { StructuralComponent } from './structural/structural.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     PercentagePipe,
-    StylingComponent
+    StylingComponent,
+    StructuralComponent
   ],
     imports: [
         BrowserModule,
@@ -18,6 +20,6 @@ import { StylingComponent } from './styling/styling.component';
         FormsModule
     ],
   providers: [],
-  bootstrap: [StylingComponent]
+  bootstrap: [StructuralComponent]
 })
 export class AppModule { }
