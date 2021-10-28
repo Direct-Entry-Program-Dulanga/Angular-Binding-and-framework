@@ -1,3 +1,9 @@
 <header>
-
+  Cart: {{inCart}}
+  <button (click)="removeFromCart()">Remove</button>
 </header>
+
+<main>
+  <app-child (updateCart)="changeCart($event)" [inCart]="inCart"></app-child>
+  <!--  <app-child (updateCart)="changeCart($event)" [inCart]="inCart"></app-child>-->
+</main>
