@@ -1,4 +1,5 @@
-<h1>Angular In Action</h1>
+<!--<h1 [attr.title]="myClass">Angular In Action</h1>-->
+<h1 [attr.class]="myClass">Angular In Action</h1>
 <div class="cart-item">
   <img src="assets/images/item.jpg" alt="Hard drive">
   <div class="cart-item__title">Seagate Portable 2TB External Hard Drive Portable HDD – USB 3.0 for PC, Mac, PS4, & Xbox</div>
@@ -48,3 +49,5 @@
     <input id="txt-discount" type="number" placeholder="Discount" min="0" [(ngModel)]="discount">
   </div>
 </div>
+<!--<button (click)="changeTooltip()">Let's change the tooltip!</button>-->
+<button (click)="changeClass()">Let's change class</button>

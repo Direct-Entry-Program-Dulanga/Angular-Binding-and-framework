@@ -8,8 +8,8 @@ import { Component } from '@angular/core';
 export class AppComponent {
   price = 100;
   discount = 10;
-
-
+  // title = 'Hello Angular I am a Property'
+  myClass = 'title-1';
   /*updatePrice(price: string) {
     this.price = +price;
   }
@@ -26,5 +26,12 @@ export class AppComponent {
     const finalPrice = this.price - (this.price * this.discount/100);
 
     return finalPrice > 100? 'lightgreen': 'lightblue';
+  }
+
+  // changeTooltip() {
+  //   this.title = "I have been changed...!"
+  // }
+  changeClass() {
+    this.myClass = 'title-2';
   }
 }
