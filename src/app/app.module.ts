@@ -6,13 +6,15 @@ import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import { PercentagePipe } from './pipe/percentage.pipe';
 import { StylingComponent } from './styling/styling.component';
 import { StructuralComponent } from './structural/structural.component';
+import { ParentComponent } from './parent/parent.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     PercentagePipe,
     StylingComponent,
-    StructuralComponent
+    StructuralComponent,
+    ParentComponent
   ],
     imports: [
         BrowserModule,
@@ -20,6 +22,6 @@ import { StructuralComponent } from './structural/structural.component';
         FormsModule
     ],
   providers: [],
-  bootstrap: [StructuralComponent]
+  bootstrap: [ParentComponent]
 })
 export class AppModule { }
