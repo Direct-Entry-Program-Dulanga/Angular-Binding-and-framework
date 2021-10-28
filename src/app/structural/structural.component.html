@@ -1,1 +1,44 @@
-<p>structural works!</p>
+<h1>ngIf Directive</h1>
+<p *ngIf="showParagraph">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias amet commodi cumque distinctio et impedit maiores natus, necessitatibus numquam omnis optio perferendis placeat possimus quisquam sapiente soluta tempora tenetur vel.</p>
+<!--<button (click)="toggleVisibility()">Show/Hide Paragraph</button>-->
+<button (click)="showParagraph = !showParagraph">Show/Hide Paragraph</button>
+<hr>
+<h1>ngFor Directive</h1>
+<table>
+  <thead>
+  <tr>
+    <th>No</th>
+    <th>ID</th>
+    <th>Name</th>
+  </tr>
+  </thead>
+  <tbody>
+  <!--    <tr *ngFor="let s of students; let i = index" [class.row]="i % 2 === 0">-->
+  <tr *ngFor="let s of students; let i = index;">
+    <td>{{i}}</td>
+    <td>{{s.id}}</td>
+    <td>{{s.name}}</td>
+  </tr>
+  </tbody>
+</table>
+<div class="control-center">
+  <button (click)="reloadStudents()">Reload Students</button>
+</div>
+<hr>
+<h1>ngSwitch Directive</h1>
+<ul>
+  <!--  <li *ngFor="let s of students" [ngSwitch]="s.rating">-->
+  <!--    {{s.name}} - -->
+  <!--    <span *ngSwitchCase="5">⭐⭐⭐⭐⭐</span>-->
+  <!--    <span *ngSwitchCase="4">⭐⭐⭐⭐</span>-->
+  <!--    <span *ngSwitchDefault>⭐⭐⭐</span>-->
+  <!--  </li>-->
+  <li *ngFor="let s of students">
+    <ng-container [ngSwitch]="s.rating">
+      {{s.name}} -
+      <span *ngSwitchCase="5">⭐⭐⭐⭐⭐</span>
+      <span *ngSwitchCase="4">⭐⭐⭐⭐</span>
+      <span *ngSwitchDefault>⭐⭐⭐</span>
+    </ng-container>
+  </li>
+</ul>
