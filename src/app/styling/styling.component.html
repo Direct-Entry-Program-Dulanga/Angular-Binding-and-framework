@@ -1,2 +1,14 @@
-<p>styling works!</p>
-<h1>dfhfkf</h1>
+<!--<h1 [class.highlight]="highlight" [class.primary]="primary" [class.underline]="underline">Let's style with classes</h1>-->
+<h1 [ngClass]="h1Classes">Let's style with classes</h1>
+
+<div>
+  <label>
+    <input type="checkbox" [(ngModel)]="highlight" (ngModelChange)="setH1Classes()">Highlight
+  </label>
+  <label>
+    <input type="checkbox" [(ngModel)]="primary" (ngModelChange)="setH1Classes()">Primary color
+  </label>
+  <label>
+    <input type="checkbox" [(ngModel)]="underline" (ngModelChange)="setH1Classes()">underline
+  </label>
+</div>
